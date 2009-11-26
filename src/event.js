@@ -550,7 +550,7 @@ jQuery.each({
 
 	special.submit = {
 		setup: function(data, namespaces) {
-			if(data.selector) {
+			if(data && data.selector) {
 				event.add(this, 'click.specialSubmit', function(e, eventData) {
 					if(jQuery(e.target).filter(":submit, :image").closest(data.selector).length) {
 						e.type = "submit";
